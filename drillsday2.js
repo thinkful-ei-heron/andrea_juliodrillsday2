@@ -116,3 +116,14 @@ totalSteps.forEach (log);
 //   console.log(`Movement # ${counter}: ${distance} step(s)`); 
 //   counter++;
 // });
+
+function subtractor(lastSent,input) {
+  if(input.length === 3) {
+    return lastSent.concat(' ');
+  } else {
+    return lastSent.concat(input.charAt(input.length - 1).toUpperCase());
+  }
+} 
+let string = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const newString = string.split(' ');
+console.log(newString.reduce(subtractor,''));
