@@ -91,3 +91,28 @@ rocksWarning('Centinela Ave and Olympic Blvd');
 
 hazardWarningCreator(codingUpAhead);
 
+
+
+const array = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+
+function keep (movement) {
+  return movement [0] >= 0 && movement[1] >= 0
+}
+
+let correctDirection = array.filter (keep);
+  
+function add (movement) {
+  return movement [0] + movement [1];
+}
+let totalSteps = correctDirection.map (add);
+
+function log (distance) {
+  console.log(distance)
+}
+totalSteps.forEach (log);
+// let counter=1 
+// totalSteps.forEach (step => { 
+//   console.log(`Movement # ${counter}: ${distance} step(s)`); 
+//   counter++;
+// });
