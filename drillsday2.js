@@ -23,3 +23,13 @@ function max(numbers) {
     }
     return minNumber;
   }
+
+  function average(numbers) {
+     let total = 0;
+     numbers.forEach(y => (total += y));
+    
+   let numAvg = total / numbers.length;
+   console.log(numAvg);
+  }
+   average([1,2,3,4,5]);
+  
