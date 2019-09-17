@@ -1,16 +1,25 @@
 'use strict' 
 
-let numbers = [1,2,3,4];
+function max(numbers) {
+    let maxNumber = numbers[0];
+    let i = 0;
+    while(i < numbers.length) {
+      if(numbers[i] > maxNumber) {
+        maxNumber = numbers[i];
+      }
+      i++;
+    }
+   return maxNumber;
+  }
 
-function max (numbers) 
-
-{ let i=0; while (numbers.length >= i) 
-    { if (numbers >= i) 
-        { return numbers; break; } 
-    };
-}
-console.log(max(numbers));
-
-function min (numbers) {
-
-};
+  function min(numbers) {
+    let minNumber = numbers[0];
+    let i = 0;
+    while(i < numbers.length) {
+      if(numbers[i] < minNumber) {
+        minNumber = numbers[i];
+      }
+      i++;
+    }
+    return minNumber;
+  }
